@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B535A3511A5CCDC300AF3898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A3501A5CCDC300AF3898 /* AppDelegate.swift */; };
-		B535A3531A5CCDC300AF3898 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B535A3521A5CCDC300AF3898 /* GameScene.sks */; };
 		B535A3551A5CCDC300AF3898 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A3541A5CCDC300AF3898 /* GameScene.swift */; };
 		B535A3571A5CCDC300AF3898 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A3561A5CCDC300AF3898 /* GameViewController.swift */; };
 		B535A35A1A5CCDC300AF3898 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B535A3581A5CCDC300AF3898 /* Main.storyboard */; };
 		B535A35C1A5CCDC300AF3898 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B535A35B1A5CCDC300AF3898 /* Images.xcassets */; };
 		B535A35F1A5CCDC300AF3898 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B535A35D1A5CCDC300AF3898 /* LaunchScreen.xib */; };
 		B535A36B1A5CCDC300AF3898 /* _0150107_ZombieCongaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535A36A1A5CCDC300AF3898 /* _0150107_ZombieCongaTests.swift */; };
+		B535A37C1A5CFF0E00AF3898 /* launchImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B535A37B1A5CFF0E00AF3898 /* launchImg@2x.png */; };
+		B535A3821A5D0DF100AF3898 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B535A3811A5D0DF100AF3898 /* background@2x.png */; };
+		B535A3841A5D202100AF3898 /* zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = B535A3831A5D202000AF3898 /* zombie.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,6 @@
 		B535A34B1A5CCDC300AF3898 /* 20150107-ZombieConga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20150107-ZombieConga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B535A34F1A5CCDC300AF3898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B535A3501A5CCDC300AF3898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B535A3521A5CCDC300AF3898 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		B535A3541A5CCDC300AF3898 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B535A3561A5CCDC300AF3898 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B535A3591A5CCDC300AF3898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,9 @@
 		B535A3641A5CCDC300AF3898 /* 20150107-ZombieCongaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20150107-ZombieCongaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B535A3691A5CCDC300AF3898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B535A36A1A5CCDC300AF3898 /* _0150107_ZombieCongaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0150107_ZombieCongaTests.swift; sourceTree = "<group>"; };
+		B535A37B1A5CFF0E00AF3898 /* launchImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImg@2x.png"; sourceTree = "<group>"; };
+		B535A3811A5D0DF100AF3898 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		B535A3831A5D202000AF3898 /* zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		B535A3421A5CCDC300AF3898 = {
 			isa = PBXGroup;
 			children = (
+				B535A37A1A5CFF0300AF3898 /* Res */,
 				B535A34D1A5CCDC300AF3898 /* 20150107-ZombieConga */,
 				B535A3671A5CCDC300AF3898 /* 20150107-ZombieCongaTests */,
 				B535A34C1A5CCDC300AF3898 /* Products */,
@@ -82,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				B535A3501A5CCDC300AF3898 /* AppDelegate.swift */,
-				B535A3521A5CCDC300AF3898 /* GameScene.sks */,
 				B535A3541A5CCDC300AF3898 /* GameScene.swift */,
 				B535A3561A5CCDC300AF3898 /* GameViewController.swift */,
 				B535A3581A5CCDC300AF3898 /* Main.storyboard */,
@@ -118,6 +122,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B535A37A1A5CFF0300AF3898 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				B535A3831A5D202000AF3898 /* zombie.png */,
+				B535A37B1A5CFF0E00AF3898 /* launchImg@2x.png */,
+				B535A3811A5D0DF100AF3898 /* background@2x.png */,
+			);
+			name = Res;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,6 +142,7 @@
 				B535A3471A5CCDC300AF3898 /* Sources */,
 				B535A3481A5CCDC300AF3898 /* Frameworks */,
 				B535A3491A5CCDC300AF3898 /* Resources */,
+				B53E5FE91A5E9B9B009A299D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -198,9 +213,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B535A37C1A5CFF0E00AF3898 /* launchImg@2x.png in Resources */,
 				B535A35F1A5CCDC300AF3898 /* LaunchScreen.xib in Resources */,
 				B535A35C1A5CCDC300AF3898 /* Images.xcassets in Resources */,
-				B535A3531A5CCDC300AF3898 /* GameScene.sks in Resources */,
+				B535A3841A5D202100AF3898 /* zombie.png in Resources */,
+				B535A3821A5D0DF100AF3898 /* background@2x.png in Resources */,
 				B535A35A1A5CCDC300AF3898 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +230,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B53E5FE91A5E9B9B009A299D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B535A3471A5CCDC300AF3898 /* Sources */ = {
@@ -415,6 +448,7 @@
 				B535A3701A5CCDC300AF3898 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B535A3711A5CCDC300AF3898 /* Build configuration list for PBXNativeTarget "20150107-ZombieCongaTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +457,7 @@
 				B535A3731A5CCDC300AF3898 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
