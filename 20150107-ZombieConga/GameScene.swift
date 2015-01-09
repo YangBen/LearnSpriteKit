@@ -10,10 +10,11 @@ import SpriteKit
 
 class GameScene: SKScene {
     let _playableRect: CGRect
+    let _zombieRotateRadiansPerSec: CGFloat = 2.0 * π
     
     var _zombie = SKSpriteNode(imageNamed: "zombie")
     var _lastUpdateTime: NSTimeInterval = 0
-    var dt: NSTimeInterval = 0
+    var _dt: NSTimeInterval = 0
     var _velocity = CGPointZero
     var _lastTouchLocation = CGPointZero
     
@@ -42,34 +43,46 @@ class GameScene: SKScene {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func rotateSprite(sprite: SKSpriteNode, direction: CGPoint){
+        sprite.zRotation = CGFloat(atan2(Double(direction.y), Double(direction.x)))
+    }
+    
+    func rotateSprite(sprite: SKSpriteNode, direction: CGPoint, rotateRadiansPerSec: CGFloat){
+        let angleBetween = shortestAngleBetween(sprite.zRotation, direction.angle())
+        let amountToRotate = angleBetween * rotateRadiansPerSec * CGFloat(_dt)
+        _zombie.zRotation += amountToRotate
+        println("Mark0109: angleBetween \(angleBetween), amountToRotate \(amountToRotate)")
+    }
+    
     override func update(currentTime: NSTimeInterval) {
         
         // time count
         if _lastUpdateTime > 0 {
-            dt = currentTime - _lastUpdateTime
+            _dt = currentTime - _lastUpdateTime
         }
         _lastUpdateTime = currentTime
-        println("\(dt*1000) milliseconds since last update")
+        // println("\(dt*1000) milliseconds since last update")
         
         // prepare move
         boundsCheckZombie()
         
         // check stop
         let distance = _zombie.position - _lastTouchLocation
-        println("Distance \(distance.length())")
+        // println("Distance \(distance.length())")
         if distance.length() < 10.0{
             _velocity = CGPointZero
             return
         }
         
         // move
-        rotateSprite(_zombie, direction: _velocity)
+//        rotateSprite(_zombie, direction: _velocity)
+        rotateSprite(_zombie, direction: _velocity, rotateRadiansPerSec:_zombieRotateRadiansPerSec)
         moveSprite(_zombie, velocity: _velocity)
     }
     
     func moveSprite(sprite: SKSpriteNode, velocity: CGPoint){
-        let amountToMove = velocity * CGFloat(dt)
-        println("Amont to move: \(amountToMove)")
+        let amountToMove = velocity * CGFloat(_dt)
+        // println("Amont to move: \(amountToMove)")
         
         sprite.position += amountToMove
     }
@@ -83,10 +96,6 @@ class GameScene: SKScene {
     
     func sceneTouched(touchLocation:CGPoint){
         moveZombieToward(touchLocation)
-    }
-    
-    func rotateSprite(sprite: SKSpriteNode, direction: CGPoint){
-        sprite.zRotation = CGFloat(atan2(Double(direction.y), Double(direction.x)))
     }
     
     func boundsCheckZombie(){
@@ -106,7 +115,7 @@ class GameScene: SKScene {
         if _zombie.position.y >= topRight.y {
             _zombie.position.y = topRight.y
             _velocity.y = -_velocity.y
-            println("---\(_zombie.position.y) ---\(_playableRect.size.height)")
+            // println("---\(_zombie.position.y) ---\(_playableRect.size.height)")
         }
         
         if _zombie.position.y <= bottomLeft.y {
@@ -138,7 +147,7 @@ class GameScene: SKScene {
         // set background img
         let background = SKSpriteNode(imageNamed: "background")
         let mysize = background.size
-        println("Size: \(mysize)")
+        // println("Size: \(mysize)")
         
         background.size = size
         background.zPosition = -1
