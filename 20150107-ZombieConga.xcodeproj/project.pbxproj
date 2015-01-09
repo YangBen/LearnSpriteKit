@@ -18,6 +18,7 @@
 		B535A3821A5D0DF100AF3898 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B535A3811A5D0DF100AF3898 /* background@2x.png */; };
 		B535A3841A5D202100AF3898 /* zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = B535A3831A5D202000AF3898 /* zombie.png */; };
 		B53C0CB81A5F627A00B68FCA /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C0CB71A5F627A00B68FCA /* MyUtils.swift */; };
+		B53C0CC61A5FA4E200B68FCA /* catLady.png in Resources */ = {isa = PBXBuildFile; fileRef = B53C0CC51A5FA4E200B68FCA /* catLady.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		B535A3811A5D0DF100AF3898 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		B535A3831A5D202000AF3898 /* zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie.png; sourceTree = "<group>"; };
 		B53C0CB71A5F627A00B68FCA /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
+		B53C0CC51A5FA4E200B68FCA /* catLady.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = catLady.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				B535A3831A5D202000AF3898 /* zombie.png */,
 				B535A37B1A5CFF0E00AF3898 /* launchImg@2x.png */,
+				B53C0CC51A5FA4E200B68FCA /* catLady.png */,
 				B535A3811A5D0DF100AF3898 /* background@2x.png */,
 			);
 			name = Res;
@@ -216,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53C0CC61A5FA4E200B68FCA /* catLady.png in Resources */,
 				B535A37C1A5CFF0E00AF3898 /* launchImg@2x.png in Resources */,
 				B535A35F1A5CCDC300AF3898 /* LaunchScreen.xib in Resources */,
 				B535A35C1A5CCDC300AF3898 /* Images.xcassets in Resources */,

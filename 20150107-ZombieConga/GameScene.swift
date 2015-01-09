@@ -18,6 +18,24 @@ class GameScene: SKScene {
     var _velocity = CGPointZero
     var _lastTouchLocation = CGPointZero
     
+    func spawnEnemy(){
+        let enemy = SKSpriteNode(imageNamed: "catLady")
+        enemy.position = CGPoint(x: size.width + enemy.size.width/2,
+            y: size.height / 2)
+        addChild(enemy)
+        
+//        let actionMove = SKAction.moveTo(CGPoint(x: -enemy.size.width/2, y: enemy.position.y), duration: 10)
+//        enemy.runAction(actionMove)
+        
+        // move in a V
+        let actionMidMove = SKAction.moveTo(CGPoint(x: size.width/2, y: CGRectGetMinY(_playableRect)),
+            duration: 5.0)
+        let wait = SKAction.waitForDuration(1);
+        let actionMove = SKAction.moveTo(CGPoint(x: -enemy.size.width/2, y: enemy.position.y), duration: 5.0)
+        let sequence = SKAction.sequence([actionMidMove, wait, actionMove])
+        enemy.runAction(sequence)
+    }
+    
     func debugDrawPlayableArea() {
         let shape = SKShapeNode()
         let path = CGPathCreateMutable()
@@ -163,7 +181,11 @@ class GameScene: SKScene {
         _zombie.setScale(2.0)
         _zombie.position = CGPoint(x: size.width/2, y: size.height/2)
         addChild(_zombie)
-            
+        
+        // debug draw a red box
         debugDrawPlayableArea()
+        
+        // add enemy: cat lady
+        spawnEnemy()
     }
 }
